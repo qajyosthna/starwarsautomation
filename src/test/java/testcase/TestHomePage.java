@@ -109,5 +109,10 @@ public class TestHomePage {
 		JSONObject jsonObject = new JSONObject(response);
 		Assert.assertEquals(TOTAL_PEOPLE_COUNT, jsonObject.getInt("count"));
 	}
+	
+	@AfterTest
+  	public void closeDriver() {
+    		webDriver.close();
+  	}
 
 }
